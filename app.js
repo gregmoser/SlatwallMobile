@@ -1,5 +1,5 @@
 Ext.application({
-    name: 'PhoneGap',
+    name: 'SlatwallMobile',
 
     requires: [
         'Ext.MessageBox'
@@ -30,7 +30,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('PhoneGap.view.Main'));
+        Ext.Viewport.add(Ext.create('SlatwallMobile.view.Main'));
     },
 
     onUpdated: function() {

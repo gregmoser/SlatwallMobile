@@ -4,10 +4,10 @@
 	id		= "com.phonegap.getting.started"
 	version 	= "1.0.0">
 
-	<name>PhoneGap: Getting Started</name>
+	<name>SlatwallMobile</name>
 
 	<description>
-		A template for getting started with PhoneGap development and build.phonegap.com
+		This is a mobile toolset for Slatwall
 	</description>
 
 	<author href="http://alunny.github.com"
@@ -15,7 +15,7 @@
 		Andrew Lunny
 	</author>
 
-	<icon src="icon.png" gap:role="default" />
+	<icon src="resources/icons/icon.png" gap:role="default" />
 
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>

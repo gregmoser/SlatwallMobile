@@ -2,7 +2,7 @@
     /**
      * The application's namespace, used by Sencha Command to generate classes
      */
-    "name": "PhoneGap",
+    "name": "SlatwallMobile",
 
     /**
      * The file path to this application's front HTML document, relative to this app.json file
@@ -32,6 +32,9 @@
      *      }
      */
     "js": [
+    	{
+            "path": "cordova-1.9.0.js"
+        },
         {
             "path": "sdk/sencha-touch-all.js"
         },
