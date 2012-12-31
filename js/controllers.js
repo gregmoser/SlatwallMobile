@@ -4,9 +4,9 @@
 
 
 function Products() {}
-MyCtrl1.$inject = [];
+Products.$inject = [];
 
 
 function Orders() {
 }
-MyCtrl2.$inject = [];
+Orders.$inject = [];
