@@ -4,15 +4,15 @@
 	id		= "com.phonegap.getting.started"
 	version 	= "1.0.0">
 
-	<name>SlatwallMobile</name>
+	<name>Slatwall</name>
 
 	<description>
 		This is a mobile toolset for Slatwall
 	</description>
 
-	<author href="http://alunny.github.com"
-		email="andrew.lunny@nitobi.com">
-		Andrew Lunny
+	<author href="http://www.gregmoser.com"
+		email="greg@gregmoser.com">
+		Greg Moser
 	</author>
 
 	<icon src="resources/icons/icon.png" gap:role="default" />
