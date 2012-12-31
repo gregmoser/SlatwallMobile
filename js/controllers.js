@@ -3,10 +3,10 @@
 /* Controllers */
 
 
-function MyCtrl1() {}
+function Products() {}
 MyCtrl1.$inject = [];
 
 
-function MyCtrl2() {
+function Orders() {
 }
 MyCtrl2.$inject = [];

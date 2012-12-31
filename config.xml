@@ -15,7 +15,7 @@
 		Greg Moser
 	</author>
 
-	<icon src="resources/icons/icon.png" gap:role="default" />
+	<icon src="img/icon.png" gap:role="default" />
 
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>

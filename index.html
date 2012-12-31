@@ -29,6 +29,7 @@
 
     // load all of the dependencies asynchronously.
     $script([
+	  'lib/phonegap/cordova-2.2.0.js',
       'lib/angular/angular.js',
       'js/app.js',
       'js/services.js',
@@ -40,13 +41,13 @@
       angular.bootstrap(document, ['myApp']);
     });
   </script>
-  <title>My AngularJS App</title>
+  <title>Slatwall</title>
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body ng-cloak>
   <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
+    <li><a href="#/products">Products</a></li>
+    <li><a href="#/orders">Orders</a></li>
   </ul>
 
   <div ng-view></div>
