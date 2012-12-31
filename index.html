@@ -5,6 +5,8 @@
 	<title>Slatwall</title>
 	<link rel="stylesheet" href="css/app.css"/>
 	<script src="phonegap.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script> --->
 </head>
 <body>
 	<ul class="menu">
@@ -13,20 +15,21 @@
 	</ul>
 	<div ng-view></div>
 	
-	<div>Slatwall Mobile Application</div>
+	<div>Slatwall Mobile Application (no angular)</div>
 	<div id="jsWorking">
 	</div>
 	<!---<div>Angular seed app: v<span app-version></span></div>--->
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
 	
-	<!--- <script src="lib/angular/angular.js"></script> --->
+	
+	
+	<!-- <script src="lib/angular/angular.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/services.js"></script>
 	<script src="js/controllers.js"></script>
 	<script src="js/filters.js"></script>
 	<script src="js/directives.js"></script>
+	 -->
 	<script type="text/javascript">
 		jQuery(document).ready(function(e){
 			jQuery('#jsWorking').html('yep its working');
