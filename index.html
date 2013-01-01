@@ -1,20 +1,31 @@
 <!doctype html>
-<html>
+<html ng-app="slatwallApp">
 	<head>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
 		<title>Slatwall</title>
 		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
-		<script src="jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/jquery/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers.js"></script>
 	</head>
 	<body>
  		<div id="title_bar">Slatwall</div>
-		This is the home page.
+		This is the template page.
 		<hr />
 		<div id="dynamic"></div>
+		<hr />
+		<ul class="menu">
+			<li><a href="#/dashboard">Dashboard</a></li>
+			<li><a href="#/products">Products</a></li>
+			<li><a href="#/orders">Orders</a></li>
+		</ul>
+		<div ng-view></div>
 		<script type="text/javascript">
 			jQuery(document).ready(function(){
 				jQuery('#dynamic').html('This is dynamic!');	
 			});
 		</script>
+		
 	</body>
 </html>
