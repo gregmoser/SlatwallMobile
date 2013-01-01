@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.alunny.amazing"
+	id		= "org.ten24.slatwall"
 	version 	= "1.0.0">
 
-	<name>alunnys Amazing App</name>
+	<name>Slatwall</name>
 
 	<description>
-		An Amazing app by alunny
+		Mobile Application for Slatwall eCommerce
 	</description>
 
-	<author href="http://alunny.github.com"
-		email="andrew.lunny@nitobi.com">
-		Andrew Lunny
+	<author href="http://www.gregmoser.com"
+		email="greg@gregmoser.com">
+		Greg Moser
 	</author>
 
 	<gap:platforms>
