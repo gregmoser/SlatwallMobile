@@ -37,7 +37,7 @@
 		<!-- setup slatwall specific css -->
 		<link href="css/main.css" rel="stylesheet">
 	</head>
-	<body>
+	<body ng-controller="Layout">
 		<div id="left_layout">
 			<!-- main content -->
 			<div id="main_content" class="container-fluid">
@@ -45,30 +45,17 @@
 				<!-- page heading -->
 				<div class="page-heading">
 				
-					<h2 class="page-title muted">
-						<i class="icon-dashboard"></i> Slatwall Dashboard
-					</h2>
-					
+					<h2 class="page-title muted"><i class="{{page.icon}}"></i> {{page.title}}</h2>
+					<!--
 					<div class="page-info hidden-phone">
 						<ul class="stats">
-							<li>
-								<span class="large text-warning">2354</span>
-								<span class="mini muted">visitors</span>
-							</li>
-							<li>
-								<span class="large text-info">4523</span>
-								<span class="mini muted">members</span>
-							</li>
-							<li>
-								<span class="large text-success">5673</span>
-								<span class="mini muted">orders</span>
-							</li>
-							<li>
-								<span class="large text-error">15</span>
-								<span class="mini muted">cancellation</span>
+							<li ng-repeat="stat in page.stats">
+								<span class="large text-{{stat.type}}">{{stat.title | lowercase}}</span>
+								<span class="mini muted">{{stat.count}}</span>
 							</li>
 						</ul>
 					</div>
+					-->
 				</div>
 				<!-- ./ page heading -->
 				
@@ -83,36 +70,25 @@
 			<!-- sidebar -->
 			<ul id="sidebar" class="nav nav-pills nav-stacked">
 				<li>
-					<a href="#/dashboard">
-						<i class="micon-screen"></i><span class="hidden-phone">Dashboard</span>
-					</a>
+					<a href="#/dashboard/"><i class="micon-screen"></i><span class="hidden-phone">Dashboard</span></a>
 				</li>
 				<li>
-					<a href="#/pos">
-						<i class="micon-cart"></i><span class="hidden-phone">POS</span>
-					</a>
-				</li>
-				<li class="dropdown">
-					<a href="#/orders" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="micon-folder"></i><span class="hidden-phone">Orders</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#/orders">Orders</a></li>
-						<li><a href="#/vendororders">Vendor Orders</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="micon-tag"></i>
-						<span class="hidden-phone">Products</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#/products">Products</a></li>
-						<li><a href="#/promotions">Promotions</a></li>
-					</ul>
+					<a href="#/pos/"><i class="micon-cart"></i><span class="hidden-phone">POS</span></a>
 				</li>
 				<li>
-					<a href="#/reports"><i class="micon-stats-up"></i><span class="hidden-phone">Reports</span></a>
+					<a href="#/accounts/"><i class="micon-user-2"></i><span class="hidden-phone">Accounts</span></a>
+				</li>
+				<li>
+					<a href="#/orders/"><i class="micon-folder"></i><span class="hidden-phone">Orders</span></a>
+				</li>
+				<li>
+					<a href="#/products/"><i class="micon-tag"></i><span class="hidden-phone">Products</span></a>
+				</li>
+				<li>
+					<a href="#/reports/"><i class="micon-stats-up"></i><span class="hidden-phone">Reports</span></a>
+				</li>
+				<li>
+					<a href="#/settings/"><i class="micon-cog"></i><span class="hidden-phone">Settings</span></a>
 				</li>
 			</ul>
 			<!-- end sidebar -->

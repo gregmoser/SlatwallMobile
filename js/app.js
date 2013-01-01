@@ -5,12 +5,14 @@
 // 'slatwallApp.filters', 'slatwallApp.services', 'slatwallApp.directives'
 angular.module('slatwallApp', []).
   config(['$routeProvider', function($routeProvider) {
-	$routeProvider.when('/dashboard', {templateUrl: 'views/dashboard.html', controller: Dashboard});
-	$routeProvider.when('/pos', {templateUrl: 'views/pos.html', controller: Pos});
-	$routeProvider.when('/orders', {templateUrl: 'views/orders.html', controller: Orders});
-	$routeProvider.when('/vendororders', {templateUrl: 'views/vendororders.html', controller: VendorOrders});
-    $routeProvider.when('/products', {templateUrl: 'views/products.html', controller: Products});
-    $routeProvider.when('/promotions', {templateUrl: 'views/promotions.html', controller: Promotions});
-    $routeProvider.when('/reports', {templateUrl: 'views/reports.html', controller: Reports});
-    $routeProvider.otherwise({redirectTo: '/dashboard'});
+	$routeProvider.when('/dashboard/', {templateUrl: 'views/dashboard.html', controller: Dashboard});
+	$routeProvider.when('/pos/', {templateUrl: 'views/pos.html', controller: Pos});
+	$routeProvider.when('/accounts/', {templateUrl: 'views/accounts.html', controller: Accounts});
+	$routeProvider.when('/account/:accountID/', {templateUrl: 'views/account.html', controller: Account});
+	$routeProvider.when('/orders/', {templateUrl: 'views/orders.html', controller: Orders});
+    $routeProvider.when('/products/', {templateUrl: 'views/products.html', controller: Products});
+    $routeProvider.when('/product/:productID/', {templateUrl: 'views/product.html', controller: Product});
+    $routeProvider.when('/reports/', {templateUrl: 'views/reports.html', controller: Reports});
+    $routeProvider.when('/settings/', {templateUrl: 'views/settings.html', controller: Settings});
+    $routeProvider.otherwise({redirectTo: '/dashboard/'});
   }]);
