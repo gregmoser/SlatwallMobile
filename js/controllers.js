@@ -2,13 +2,23 @@
 
 /* Controllers */
 
-function Dashboard() {
-}
+function Dashboard() {}
+Dashboard.$inject = [];
+
+function Pos() {}
+Pos.$inject = [];
+
+function Orders() {}
 Orders.$inject = [];
+
+function VendorOrders() {}
+VendorOrders.$inject = [];
 
 function Products() {}
 Products.$inject = [];
 
-function Orders() {
-}
-Orders.$inject = [];
+function Promotions() {}
+Promotions.$inject = [];
+
+function Reports() {}
+Reports.$inject = [];
