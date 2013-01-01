@@ -45,7 +45,7 @@ function Products($scope, $routeParams) {
 
 function Orders($scope, $routeParams) {
 	$scope.$parent.page.title = 'Orders';
-	$scope.$parent.page.icon = 'micon-folder';
+	$scope.$parent.page.icon = 'micon-drawer-2';
 }
 
 function Reports($scope, $routeParams) {
