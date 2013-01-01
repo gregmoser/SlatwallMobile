@@ -1,0 +1,7 @@
+#left_layout #sidebar.nav.nav-pills.nav-stacked {
+	top:0px;
+}
+#left_layout #main_content.container-fluid {
+	margin-right: 0px;
+	margin-bottom: 0px;
+}

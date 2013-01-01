@@ -12,5 +12,3 @@ Products.$inject = [];
 function Orders() {
 }
 Orders.$inject = [];
-
-
