@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "org.ten24.slatwall"
+	id		= "com.ten24.slatwall"
 	version 	= "1.0.0">
 
 	<name>Slatwall</name>
