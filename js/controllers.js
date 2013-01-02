@@ -52,6 +52,44 @@ function Account($scope, $routeParams) {
 function Products($scope, $routeParams) {
 	$scope.$parent.page.title = 'Products';
 	$scope.$parent.page.icon = 'micon-tag';
+	$scope.products = [
+	                 {'productName':'Air Jordan', 'brand.brandName':'Nike', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'New Shoe', 'brand.brandName':'Rebok', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'F8', 'brand.brandName':'adidas', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'Air Jordan', 'brand.brandName':'Nike', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'New Shoe', 'brand.brandName':'Rebok', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'F8', 'brand.brandName':'adidas', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'Air Jordan', 'brand.brandName':'Nike', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'New Shoe', 'brand.brandName':'Rebok', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'F8', 'brand.brandName':'adidas', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'Air Jordan', 'brand.brandName':'Nike', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'New Shoe', 'brand.brandName':'Rebok', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'F8', 'brand.brandName':'adidas', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'Air Jordan', 'brand.brandName':'Nike', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'New Shoe', 'brand.brandName':'Rebok', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'F8', 'brand.brandName':'adidas', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'Air Jordan', 'brand.brandName':'Nike', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'New Shoe', 'brand.brandName':'Rebok', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'F8', 'brand.brandName':'adidas', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'Air Jordan', 'brand.brandName':'Nike', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'New Shoe', 'brand.brandName':'Rebok', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'F8', 'brand.brandName':'adidas', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'Air Jordan', 'brand.brandName':'Nike', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'New Shoe', 'brand.brandName':'Rebok', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'F8', 'brand.brandName':'adidas', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'Air Jordan', 'brand.brandName':'Nike', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'New Shoe', 'brand.brandName':'Rebok', 'productType.productTypeName':'Shoes'},
+	                 {'productName':'F8', 'brand.brandName':'adidas', 'productType.productTypeName':'Shoes'}
+	                 ];
+	$scope.brands = [
+	                 {brandName:'Nike'},
+	                 {brandName:'adidas'},
+	                 {brandName:'Rebok'}
+	                 ];
+	$scope.promotions = [
+	                 {promotionName:'Weekly Special'},
+	                 {promotionName:'New Years Deal'}
+	                 ];
 	BindView();
 }
 

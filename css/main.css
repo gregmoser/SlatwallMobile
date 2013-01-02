@@ -43,21 +43,33 @@ body {
 	margin-left:75px;
 	
 }
-.table-mobile {
-	
+.table-mobile td {
+	border-top:0px;
+	border-bottom:1px solid #ddd;
+	padding-top:15px;
+	padding-bottom:15px;
 }
 .nav-tabs {
 	position:fixed;
 	width:100%;
+	top:75px;
+	left:75px;
 }
 .tab-content {
-	margin-top:40px;
+	margin-top:38px;
+	margin-left:1px;
+	border-right:none !important;
+	border-bottom:none !important;
 }
 .tabs-custom .tab-content .tab-pane {
 	margin: 0px;
 }
 @media (max-width: 767px){
 	.page-heading {
+		left:40px;
+	}
+	.nav-tabs {
+		top:45px;
 		left:40px;
 	}
 	#primary-view {
