@@ -5,10 +5,13 @@
 		<title>Slatwall</title>
 		
 		<!-- Setup Phonegap -->
-		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="phonegap.js" type="text/javascript" charset="utf-8"></script> -->
 		
 		<!-- Setup jQuery -->
 		<script src="lib/jquery/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!-- Setup touchswipe -->
+		<script src="lib/touchswipe/jquery.touchswipe.min.js"></script>
 		
 		<!-- Setup Angular -->
 		<script src="lib/angular/angular.js" type="text/javascript" charset="utf-8"></script>
@@ -64,7 +67,7 @@
 				
 				<!-- post wrapper -->				
 				<div class="row-fluid">
-					<div ng-view></div>
+					<div id="primary-view" ng-view></div>
 				</div>
 				<!-- ./ post wrapper -->
 			</div>
@@ -99,7 +102,11 @@
 			</ul>
 			<!-- end sidebar -->
 			
+			<!--
+			<div class="console">
+				Console Not Dynamic
+			</div>
+			-->
 		</div>
-		
 	</body>
 </html>

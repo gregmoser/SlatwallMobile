@@ -2,6 +2,18 @@
 
 /* Controllers */
 
+function BindView() {
+	jQuery('#primary-view').find('.tabbable').swipe( {
+		swipeLeft:function(event, direction, distance, duration, fingerCount) {
+			jQuery(this).find('.nav-tabs li.active').next('li').find('a').tab('show');
+		},
+		swipeRight:function(event, direction, distance, duration, fingerCount) {
+			jQuery(this).find('.nav-tabs li.active').prev('li').find('a').tab('show');
+		},
+		threshold:0
+	});
+}
+
 function Layout($scope, $route, $routeParams, $location) {
 	$scope.$route = $route;
   	$scope.$location = $location;
@@ -40,6 +52,10 @@ function Account($scope, $routeParams) {
 function Products($scope, $routeParams) {
 	$scope.$parent.page.title = 'Products';
 	$scope.$parent.page.icon = 'micon-tag';
+	BindView();
+}
+
+function Product($scope, $routeParams) {
 	
 }
 
@@ -53,9 +69,6 @@ function Reports($scope, $routeParams) {
 	$scope.$parent.page.icon = 'micon-stats-up';
 }
 
-function Product($scope, $routeParams) {
-	
-}
 
 function Settings($scope, $routeParams) {
 	$scope.$parent.page.title = 'Settings';
