@@ -38,7 +38,10 @@
 		<link href="css/main.css" rel="stylesheet">
 	</head>
 	<body ng-controller="Layout">
+		
+		
 		<div id="left_layout">
+			
 			<!-- main content -->
 			<div id="main_content" class="container-fluid">
 			
@@ -69,11 +72,9 @@
 			
 			<!-- sidebar -->
 			<ul id="sidebar" class="nav nav-pills nav-stacked">
-				<!--
 				<li class="visible-phone">
-					<a href="#"><i class="micon-menu-2"></i></a>
+					<a href="#"><i class="micon-menu-2"></i><span class="hidden-phone">Close</span></a>
 				</li>
-				-->
 				<li>
 					<a href="#/dashboard/"><i class="micon-screen"></i><span class="hidden-phone">Dashboard</span></a>
 				</li>
@@ -97,6 +98,7 @@
 				</li>
 			</ul>
 			<!-- end sidebar -->
+			
 		</div>
 		
 	</body>

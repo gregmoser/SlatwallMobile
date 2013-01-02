@@ -11,10 +11,31 @@
 .page-heading {
 	position:fixed;
 	width:100%;
+	top:0px;
+	left:75px;
+	margin:0px;
 	-moz-box-shadow: 1px 1px 2px #ccc;
 	-webkit-box-shadow: 1px 1px 2px #ccc;
 	box-shadow: 1px 1px 2px #ccc;
 }
 .table-mobile {
 	
+}
+@media (max-width:979px){
+	#main_content.container-fluid {
+		padding:75px 0px 0px 0px;
+	}
+}
+@media (max-width: 767px){
+	.page-heading {
+		left:40px;
+	}
+	#main_content.container-fluid {
+		padding:45px 0px 0px 0px;
+	}
+	/*
+	#sidebar.nav-pills > li > a {
+		width: 60px;
+	}
+	*/	
 }
