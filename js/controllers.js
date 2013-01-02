@@ -3,15 +3,69 @@
 /* Controllers */
 
 function BindView() {
-	jQuery('#primary-view').find('.tabbable').swipe( {
-		swipeLeft:function(event, direction, distance, duration, fingerCount) {
-			jQuery(this).find('.nav-tabs li.active').next('li').find('a').tab('show');
+	
+	/* Setup Swipe Logic */
+	jQuery('#primary-view').find('.swipeable').swipe( {
+		swipeStatus:function(event, phase, direction, distance) {
+			
+			console.log(direction);
+			
+			var active = jQuery(this).find('.nav-tabs li.active');
+			
+			if (direction == "right") {
+				var newActive = jQuery(active).prev('li');
+			} else {
+				var newActive = jQuery(active).next('li');
+			}
+			
+			if(jQuery(newActive).length) {
+				
+				if(jQuery('#sidebar').width() > 40){
+					var aoff = 75;
+				} else {
+					var aoff = 40;
+				}
+				
+				var homeLeft = ((jQuery(active).prevAll('li').length * (jQuery(this).find('.nav-tabs').width() - (jQuery(active).prevAll('li').length+1 * aoff))) - aoff )*-1;
+				
+				if( phase=="move" && (direction=="left" || direction=="right") ) {
+					if (direction == "left") {
+						jQuery(this).find('.swipe-pane').css( 'left', (homeLeft - distance) + 'px' );
+					} else if (direction == "right") {
+						jQuery(this).find('.swipe-pane').css( 'left', (homeLeft + distance) + 'px' );
+					}
+				} else if ( phase == "cancel") {
+					jQuery(this).find('.swipe-pane').css( 'left', homeLeft + 'px' );
+					jQuery(this).find('.swipe-pane').animate({
+						left: homeLeft + 'px'
+					});
+				} else if ( phase =="end" ) {
+					jQuery(this).find('.nav-tabs li').removeClass('active');
+					jQuery(newActive).addClass('active');
+					jQuery(this).find('.swipe-pane').animate({
+						left: ((jQuery(newActive).prevAll('li').length * (jQuery(this).find('.nav-tabs').width() - (jQuery(newActive).prevAll('li').length+1 * aoff))) - aoff )*-1 + 'px'
+					},{
+						duration: 'fast',
+						easing: 'swing'
+					});
+				}
+			}
+			
 		},
-		swipeRight:function(event, direction, distance, duration, fingerCount) {
-			jQuery(this).find('.nav-tabs li.active').prev('li').find('a').tab('show');
-		},
-		threshold:0
+		threshold:5,
+		allowPageScroll:"vertical"
 	});
+	
+	jQuery('#primary-view').find('.swipe-content').height(jQuery('#sidebar').height());
+	
+	if(jQuery('#sidebar').width() > 40){
+		jQuery('#primary-view').find('.swipe-pane').height(jQuery('#sidebar').height() - 115);
+		jQuery('#primary-view').find('.swipe-pane').width(jQuery('.nav-tabs').width() - 75);
+	} else {
+		jQuery('#primary-view').find('.swipe-pane').height(jQuery('#sidebar').height() - 85);
+		jQuery('#primary-view').find('.swipe-pane').width(jQuery('.nav-tabs').width() - 40);
+	}
+
 }
 
 function Layout($scope, $route, $routeParams, $location) {

@@ -1,11 +1,11 @@
-<div class="tabbable tabs-custom">
+<div class="swipeable tabs-custom">
 	<ul class="nav nav-tabs">
-		<li class="active"><a href="#products" data-toggle="tab">Products</a></li>
-		<li class=""><a href="#brands" data-toggle="tab">Brands</a></li>
-		<li class=""><a href="#promotions" data-toggle="tab">Promotions</a></li>
+		<li class="active"><a href="#products" data-toggle="swipe">Products</a></li>
+		<li class=""><a href="#brands" data-toggle="swipe">Brands</a></li>
+		<li class=""><a href="#promotions" data-toggle="swipe">Promotions</a></li>
 	</ul>
-	<div class="tab-content">
-		<div class="tab-pane active" id="products">
+	<ul class="swipe-content">
+		<li class="swipe-pane" id="products">
 			<table class="table table-mobile table-stripe">
 				<tbody>
 					<tr ng-repeat="product in products">
@@ -15,8 +15,8 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>
-		<div class="tab-pane" id="brands">
+		</li>
+		<li class="swipe-pane" id="brands">
 			<table class="table table-mobile table-stripe">
 				<tbody>
 					<tr ng-repeat="brand in brands">
@@ -24,8 +24,8 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>
-		<div class="tab-pane" id="promotions">
+		</li>
+		<li class="swipe-pane" id="promotions">
 			<table class="table table-mobile table-stripe">
 				<tbody>
 					<tr ng-repeat="promotion in promotions">
@@ -33,6 +33,6 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>
+		</li>
 	</div>
 </div>

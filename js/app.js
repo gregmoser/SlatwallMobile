@@ -16,4 +16,3 @@ angular.module('slatwallApp', []).
     $routeProvider.when('/settings/', {templateUrl: 'views/settings.html', controller: Settings});
     $routeProvider.otherwise({redirectTo: '/dashboard/'});
   }]);
-
