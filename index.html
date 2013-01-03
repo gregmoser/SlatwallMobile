@@ -42,71 +42,37 @@
 	</head>
 	<body ng-controller="Layout">
 		
+		<ul id="sidebar" class="nav nav-pills nav-stacked">
+			<li class="visible-phone">
+				<a href="#"><i class="micon-menu-2"></i><span class="hidden-phone">Close</span></a>
+			</li>
+			<li>
+				<a href="#/dashboard/"><i class="micon-screen"></i><span class="hidden-phone">Dashboard</span></a>
+			</li>
+			<li>
+				<a href="#/pos/"><i class="micon-cart"></i><span class="hidden-phone">POS</span></a>
+			</li>
+			<li>
+				<a href="#/accounts/"><i class="micon-user-2"></i><span class="hidden-phone">Accounts</span></a>
+			</li>
+			<li>
+				<a href="#/orders/"><i class="micon-drawer-2"></i><span class="hidden-phone">Orders</span></a>
+			</li>
+			<li>
+				<a href="#/products/"><i class="micon-tag"></i><span class="hidden-phone">Products</span></a>
+			</li>
+			<li>
+				<a href="#/reports/"><i class="micon-stats-up"></i><span class="hidden-phone">Reports</span></a>
+			</li>
+			<li>
+				<a href="#/settings/"><i class="micon-cog"></i><span class="hidden-phone">Settings</span></a>
+			</li>
+		</ul>
 		
-		<div id="left_layout">
-			
-			<!-- main content -->
-			<div id="main_content" class="container-fluid">
-			
-				<!-- page heading -->
-				<div class="page-heading">
-				
-					<h2 class="page-title muted"><i class="{{page.icon}}"></i> {{page.title}}</h2>
-					<!--
-					<div class="page-info hidden-phone">
-						<ul class="stats">
-							<li ng-repeat="stat in page.stats">
-								<span class="large text-{{stat.type}}">{{stat.title | lowercase}}</span>
-								<span class="mini muted">{{stat.count}}</span>
-							</li>
-						</ul>
-					</div>
-					-->
-				</div>
-				<!-- ./ page heading -->
-				
-				<!-- post wrapper -->				
-				<div class="row-fluid">
-					<div id="primary-view" ng-view></div>
-				</div>
-				<!-- ./ post wrapper -->
+		<div id="primary-content">
+			<div ng-view>
 			</div>
-			<!-- end main content -->
-			
-			<!-- sidebar -->
-			<ul id="sidebar" class="nav nav-pills nav-stacked">
-				<li class="visible-phone">
-					<a href="#"><i class="micon-menu-2"></i><span class="hidden-phone">Close</span></a>
-				</li>
-				<li>
-					<a href="#/dashboard/"><i class="micon-screen"></i><span class="hidden-phone">Dashboard</span></a>
-				</li>
-				<li>
-					<a href="#/pos/"><i class="micon-cart"></i><span class="hidden-phone">POS</span></a>
-				</li>
-				<li>
-					<a href="#/accounts/"><i class="micon-user-2"></i><span class="hidden-phone">Accounts</span></a>
-				</li>
-				<li>
-					<a href="#/orders/"><i class="micon-drawer-2"></i><span class="hidden-phone">Orders</span></a>
-				</li>
-				<li>
-					<a href="#/products/"><i class="micon-tag"></i><span class="hidden-phone">Products</span></a>
-				</li>
-				<li>
-					<a href="#/reports/"><i class="micon-stats-up"></i><span class="hidden-phone">Reports</span></a>
-				</li>
-				<li>
-					<a href="#/settings/"><i class="micon-cog"></i><span class="hidden-phone">Settings</span></a>
-				</li>
-			</ul>
-			<!-- end sidebar -->
-			
-			<!--
-			<div class="console">
-				Console Not Dynamic
-			</div>
-			-->
 		</div>
+		
 	</body>
 </html>

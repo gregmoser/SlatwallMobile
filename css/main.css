@@ -1,94 +1,64 @@
-.console {
-	position:fixed;
-	width:100%;
-	overflow: auto;
-	height:40px;
-	bottom:0px;
-	left:0px;
-	background-color:#fff;
-	z-index:10000;
-}
+/* Main Layout */
 body {
 	background-color:#fff;
-	overflow:hidden;
+	height:100% !important;
+	width:100% !important;
+	overflow: hidden;
 }
-#left_layout #sidebar.nav.nav-pills.nav-stacked {
-	top:0px;
+#sidebar.nav.nav-pills.nav-stacked {
 	position:fixed;
-	margin-bottom:0px;
+	top:0px;
+	right:0px;
 	height:100%;
-	background-color:#333;
 	z-index:1000;
+	background-color:#333;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
-#left_layout #main_content.container-fluid {
-	margin: 0px;
-	padding: 0px;
-	position:absolute;
-	top: 0px;
-	left: -1px;
-	width:100%;
-	background-color:#fff;
-}
-.page-heading {
+#primary-content {
 	position:fixed;
-	width:100%;
-	top:0px;
-	left:75px;
-	margin:0px;
-	-moz-box-shadow: 1px 1px 2px #ccc;
-	-webkit-box-shadow: 1px 1px 2px #ccc;
-	box-shadow: 1px 1px 2px #ccc;
-}
-.table-mobile td {
-	border-top:0px;
-	border-bottom:1px solid #ddd;
-	padding:15px;
-}
-.nav-tabs {
-	position:fixed;
-	width:100%;
-	top:75px;
-	left:75px;
-	border-left: none !important;
-}
-
-.swipe-content {
-	position:absolute;
-	width:10000%;
-	margin:0px;
-	padding:0px;
 	top:0px;
 	left:0px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+/* Side-Swipe Layout */
+.swipe-tabs {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	border-left: none !important;
+	z-index: 90;
+}
+.swipe-tabs li.active .hidden-phone {
+	display: inline !important;
+}
+.swipe-content {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:10000%;
+	margin:0px;
+	padding:20px 0px 0px 0px;
+	overflow:hidden;
 }
 .swipe-pane {
 	position:relative;
 	display:inline-block;
 	float:left;
-	margin:0px;
-	top:115px;
-	left:75px;
+	top:0px;
+	left:0px;
+	margin-top:19px;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
-@media (max-width: 767px){
-	.page-heading {
-		left:40px;
-	}
-	.nav-tabs {
-		top:45px;
-		left:40px;
-	}
-	.nav-tabs {
-		top:45px;
-		left:40px;
-	}
-	.swipe-pane {
-		top:85px;
-		left:40px;
-	}
-	/*
-	#sidebar.nav-pills > li > a {
-		width: 60px;
-	}
-	*/
+
+
+/* Helper Styles */
+
+.table-mobile td {
+	border-top:0px;
+	border-bottom:1px solid #ddd;
+	padding:15px;
 }
